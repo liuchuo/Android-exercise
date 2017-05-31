@@ -5,15 +5,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class AddActivity extends AppCompatActivity {
+public class EditActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add);
+        setContentView(R.layout.activity_edit);
 
         // 取消按钮
-        Button cancelBtn = (Button) findViewById(R.id.add_cancel_button);
+        Button cancelBtn = (Button) findViewById(R.id.edit_cancel_button);
 
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,8 +22,6 @@ public class AddActivity extends AppCompatActivity {
             }
         });
 
-        // 添加按钮
+        // 修改按钮
     }
-
-
 }
