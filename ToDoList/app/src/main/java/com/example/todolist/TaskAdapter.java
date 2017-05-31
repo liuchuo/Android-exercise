@@ -45,8 +45,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 int position = holder.getAdapterPosition();
+                Task task = mTaskList.get(position);
                 Intent editIntent = new Intent(view.getContext(), EditActivity.class);
-                
+                String titleData = task.getTitle();
+                String subTitleData = task.getSubTitle();
+                editIntent.putExtra("intentTitle", titleData);
+                editIntent.putExtra("intentSubTitle", subTitleData);
                 view.getContext().startActivity(editIntent);
             }
         });
