@@ -9,6 +9,12 @@ public class Task {
     private String title;
     private String subTitle;
 
+    public Task(boolean isChecked, String title, String subTitle) {
+        this.isChecked = isChecked;
+        this.title = title;
+        this.subTitle = subTitle;
+    }
+
     public boolean isChecked() {
         return isChecked;
     }
