@@ -5,17 +5,15 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/add_title"
+        android:id="@+id/edit_title"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:hint="输入任务名称..." />
+        android:layout_marginTop="20dp" />
 
     <EditText
-        android:id="@+id/add_subTitle"
+        android:id="@+id/edit_subTitle"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:hint="输入备注..." />
+        android:layout_height="100dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +21,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/add_cancel_button"
+            android:id="@+id/edit_cancel_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
@@ -33,14 +31,14 @@
             android:text="取消" />
 
         <Button
-            android:id="@+id/add_enter_button"
+            android:id="@+id/edit_enter_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="30dp"
             android:background="@color/colorAccent"
-            android:text="添加" />
+            android:text="修改" />
 
     </LinearLayout>
 
