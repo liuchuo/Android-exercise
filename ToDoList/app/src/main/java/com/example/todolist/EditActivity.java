@@ -23,6 +23,7 @@ public class EditActivity extends AppCompatActivity {
         EditText subTitleText = (EditText) findViewById(R.id.edit_subTitle);
         subTitleText.setText(intentSubTitle);
 
+
         // 取消按钮
         Button cancelBtn = (Button) findViewById(R.id.edit_cancel_button);
 

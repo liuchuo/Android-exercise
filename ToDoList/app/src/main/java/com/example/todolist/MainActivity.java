@@ -1,12 +1,18 @@
 package com.example.todolist;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +36,21 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         TaskAdapter adapter = new TaskAdapter(taskList);
         recyclerView.setAdapter(adapter);
+
+        // checked按钮
+        CheckBox isCheckedBtn = (CheckBox) findViewById(R.id.task_item_checkBox);
+        final TextView titleText = (TextView) findViewById(R.id.task_item_title);
+        final TextView subTitleText = (TextView) findViewById(R.id.task_item_subTitle);
+
+//        isCheckedBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if(isChecked) {
+////                    titleText.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+////                    subTitleText.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+//                }
+//            }
+//        });
 
 
         // 浮动添加按钮的跳转功能

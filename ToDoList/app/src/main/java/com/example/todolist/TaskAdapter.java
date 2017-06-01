@@ -1,12 +1,16 @@
 package com.example.todolist;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -38,7 +42,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
         final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.task_item, parent, false);
         final ViewHolder holder = new ViewHolder(view);
         holder.taskView.setOnClickListener(new View.OnClickListener() {
@@ -54,20 +58,22 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
                 view.getContext().startActivity(editIntent);
             }
         });
+
         return holder;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Task task = mTaskList.get(position);
-        holder.isChecked.setChecked(task.isChecked());
+
         holder.TaskTitle.setText(task.getTitle());
         holder.TaskSubTitle.setText(task.getSubTitle());
+
+
     }
 
     @Override
     public int getItemCount() {
         return mTaskList.size();
     }
-
 }
