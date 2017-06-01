@@ -17,7 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddActivity" />
-        <activity android:name=".EditActivity"></activity>
+        <activity android:name=".EditActivity" />
+
+        <service
+            android:name=".NotifyService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

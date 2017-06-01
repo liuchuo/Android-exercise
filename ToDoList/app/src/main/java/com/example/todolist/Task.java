@@ -6,11 +6,13 @@ package com.example.todolist;
 
 public class Task {
     private boolean isChecked;
+    private int taskId;
     private String title;
     private String subTitle;
 
-    public Task(boolean isChecked, String title, String subTitle) {
+    public Task(boolean isChecked, int taskId, String title, String subTitle) {
         this.isChecked = isChecked;
+        this.taskId = taskId;
         this.title = title;
         this.subTitle = subTitle;
     }
@@ -21,6 +23,14 @@ public class Task {
 
     public void setChecked(boolean checked) {
         isChecked = checked;
+    }
+
+    public int getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(int taskId) {
+        this.taskId = taskId;
     }
 
     public String getTitle() {
