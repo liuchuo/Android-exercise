@@ -50,7 +50,6 @@ public class EditActivity extends AppCompatActivity {
 
                 values.put("title", titleText.getText().toString());
                 values.put("subtitle", subTitleText.getText().toString());
-                Log.d("123", intentId + " " + titleText.getText().toString() + " " + subTitleText.getText().toString());
                 db.update("Task", values, "id = ?", new String[]{String.valueOf(intentId)});
                 Intent serviceIntent = new Intent(EditActivity.this, NotifyService.class);
                 startService(serviceIntent);

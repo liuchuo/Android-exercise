@@ -7,7 +7,6 @@ import android.app.Service;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.IBinder;
-import android.support.annotation.IntDef;
 import android.support.v4.app.NotificationCompat;
 
 public class NotifyService extends Service {
